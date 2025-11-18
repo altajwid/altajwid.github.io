@@ -46,7 +46,6 @@
             overflow: hidden;
         }
 
-        /* هالة زخرفية خلفية خفيفة */
         .container::before {
             content: "";
             position: absolute;
@@ -62,43 +61,33 @@
             font-family: "Amiri", serif;
             font-size: 27px;
             font-weight: 700;
-            color: #fefce8;
+            color: #0b3b2a; /* كان أبيض – الآن أخضر داكن بلا خلفية */
             text-align: center;
-            margin: 0 0 8px;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+            margin: 0 0 4px;
+            text-shadow: 0 1px 2px rgba(255,255,255,0.6);
             position: relative;
         }
 
+        /* الغطاء السابق أصبح شفافًا وبدون خلفية */
         .page-title-wrap {
-            background: linear-gradient(135deg, #064e3b, #0b3b2a);
-            margin: -26px -20px 14px;
-            padding: 22px 16px 18px;
-            border-radius: 22px 22px 40px 40px;
-            border-bottom: 2px solid rgba(212,175,55,0.7);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.55);
+            margin: 0 0 10px;
+            padding: 0;
+            border-radius: 0;
+            background: transparent;
+            border-bottom: none;
+            box-shadow: none;
             position: relative;
-            overflow: hidden;
         }
 
         .page-title-wrap::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background:
-                radial-gradient(circle at 10% 0%, rgba(234,179,8,0.25), transparent 55%),
-                radial-gradient(circle at 90% 20%, rgba(34,197,94,0.18), transparent 60%);
-            opacity: 0.6;
-        }
-
-        .page-title-wrap > * {
-            position: relative;
-            z-index: 1;
+            content: none;
         }
 
         .subtitle {
             font-size: 13px;
-            color: #e5e7eb;
+            color: #4b5563;
             text-align: center;
+            margin-bottom: 6px;
         }
 
         .cover {
@@ -111,7 +100,6 @@
             border: 2px solid rgba(212,175,55,0.55);
         }
 
-        /* زر تحميل الكتاب PDF بإطار ذهبي فاخر */
         .download-main-wrapper {
             display: flex;
             justify-content: center;
@@ -152,7 +140,6 @@
                 0 0 22px rgba(212,175,55,0.95);
         }
 
-        /* فاصل زخرفي إسلامي */
         .section-divider {
             width: 72%;
             height: 2px;
@@ -180,7 +167,6 @@
             font-size: 20px;
         }
 
-        /* عناوين الأقسام */
         .section-title {
             font-size: 20px;
             font-weight: 800;
@@ -193,11 +179,11 @@
             text-align: right;
         }
 
-        /* المرئي – كحلي قرآني مزخرف */
+        /* ✅ المحتوى المرئي – بني خشبي مع إطار ذهبي */
         .section-title.section-title-videos {
-            background: linear-gradient(135deg, #132743, #1f3b63);
-            color: #f9fafb;
-            border: 2px solid #e6d8a8;
+            background: linear-gradient(135deg, #8c6b4c, #6f4b2e);
+            color: #fefce8;
+            border: 2px solid #d4af37;
             box-shadow: 0 6px 16px rgba(0,0,0,0.35);
             text-shadow: 0 1px 3px rgba(0,0,0,0.5);
         }
@@ -236,7 +222,7 @@
             z-index: 1;
         }
 
-        /* الصوتي – كحلي مزرق */
+        /* المحتوى الصوتي – كما في النسخة السابقة (كحلي مزرق) */
         .section-title.section-title-audios {
             background: linear-gradient(135deg, #1d3266, #274b8f);
             color: #f9fafb;
@@ -298,7 +284,7 @@
 
         .item.video {
             background: #d2ecf7;
-            border-right: 4px solid var(--deep-blue);
+            border-right: 4px solid #3b82f6;
         }
 
         .item.audio {
@@ -323,7 +309,6 @@
             white-space: nowrap;
         }
 
-        /* زر تحميل جميع الفيديوهات/الصوتيات */
         .bulk-download-btn {
             display: block;
             width: 96%;
@@ -356,7 +341,6 @@
             box-shadow: 0 8px 18px rgba(0,0,0,0.25);
         }
 
-        /* حقوق النشر */
         .copyright {
             margin-top: 28px;
             font-size: 16px;
@@ -369,7 +353,6 @@
             text-align: center;
         }
 
-        /* منطقة المشاركة */
         .share-area {
             margin-top: 18px;
             text-align: center;
@@ -409,16 +392,11 @@
             filter: brightness(1.1);
         }
 
-        /* استجابة للجوال */
         @media (max-width: 600px) {
             .container {
                 margin: 16px 8px 26px;
                 padding: 20px 14px 22px;
                 border-radius: 18px;
-            }
-            .page-title-wrap {
-                margin: -20px -14px 12px;
-                padding-inline: 12px;
             }
             .cover {
                 width: 94%;
@@ -444,13 +422,12 @@
 
     <!-- زر تحميل الكتاب PDF -->
     <div class="download-main-wrapper">
-        <!-- غيّر book.pdf إلى اسم ملف الكتاب إن أحببت -->
         <a href="book.pdf" class="download-main-btn">
             📥 تحميل الكتاب PDF
         </a>
     </div>
 
-    <!-- فاصل زخرفي قبل قسم الفيديوهات -->
+    <!-- فاصل زخرفي -->
     <div class="section-divider"></div>
 
     <!-- المحتوى المرئي -->
@@ -490,13 +467,10 @@
 
     </div>
 
-    <!-- زر تحميل جميع الفيديوهات -->
-    <!-- غيّر videos.zip عند رفع الملف -->
     <a href="videos.zip" class="bulk-download-btn video">
         ⬇️ تحميل جميع الفيديوهات كملف واحد
     </a>
 
-    <!-- فاصل زخرفي بين المرئي والصوتي -->
     <div class="section-divider"></div>
 
     <!-- المحتوى الصوتي -->
@@ -521,40 +495,34 @@
         <div class="item audio"><span class="text">استماع الدرس (11): إدغامُ المُتماثِلَينِ والمُتجانسَينِ والمُتقاربَينِ</span><span class="soon-badge">⏳ قريبًا</span></div>
         <div class="item audio"><span class="text">استماع الدرس (12): الحُرُوفُ المُقطَّعةِ</span><span class="soon-badge">⏳ قريبًا</span></div>
         <div class="item audio"><span class="text">استماع الدرس (13): الألِفاتُ السَّبعةُ</span><span class="soon-badge">⏳ قريبًا</span></div>
-        <div class="item audio"><span class="text">استماع الدرس (14): التَّفخيمُ والتَّرقيق</span><span class="soon-badge">⏳ قریبًا</span></div>
-        <div class="item audio"><span class="text">استماع الدرس (15): الوَقْفُ والابتداءُ</span><span class="soon-badge">⏳ قریبًا</span></div>
-        <div class="item audio"><span class="text">استماع الدرس (16): السَّكْتُ</span><span class="soon-badge">⏳ قریبًا</span></div>
-        <div class="item audio"><span class="text">استماع الدرس (17): الرَّومُ والإشمامُ</span><span class="soon-badge">⏳ قریبًا</span></div>
-        <div class="item audio"><span class="text">استماع الدرس (18): التقاءُ السَّاكنَينِ</span><span class="soon-badge">⏳ قریبًا</span></div>
-        <div class="item audio"><span class="text">استماع الدرس (19): مُلاحظاتٌ حولَ قراءةِ حَفْصٍ</span><span class="soon-badge">⏳ قریبًا</span></div>
-        <div class="item audio"><span class="text">استماع الدرس (20): القُرَّاءُ العشرةُ ورواتُهم</span><span class="soon-badge">⏳ قریبًا</span></div>
-        <div class="item audio"><span class="text">استماع الدرس (21): الهمزةُ الأوَّليَّةُ (الوَصْلُ، والقَطْعُ)</span><span class="soon-badge">⏳ قریبًا</span></div>
-        <div class="item audio"><span class="text">استماع الدرس (22): الرَّسمُ العُثمانيُّ للمُصحَفِ الشَّريفِ</span><span class="soon-badge">⏳ قریبًا</span></div>
-        <div class="item audio"><span class="text">استماع الدرس (23): فَوائدُ تجويديَّةٌ</span><span class="soon-badge">⏳ قریبًا</span></div>
-        <div class="item audio"><span class="text">استماع الدرس (24): لَطائفُ قُرآنيَّةٌ</span><span class="soon-badge">⏳ قریبًا</span></div>
-        <div class="item audio"><span class="text">استماع الدرس (25): ثَمَراتٌ مُتَّصِلةٌ</span><span class="soon-badge">⏳ قریبًا</span></div>
+        <div class="item audio"><span class="text">استماع الدرس (14): التَّفخيمُ والتَّرقيق</span><span class="soon-badge">⏳ قريبًا</span></div>
+        <div class="item audio"><span class="text">استماع الدرس (15): الوَقْفُ والابتداءُ</span><span class="soon-badge">⏳ قريبًا</span></div>
+        <div class="item audio"><span class="text">استماع الدرس (16): السَّكْتُ</span><span class="soon-badge">⏳ قريبًا</span></div>
+        <div class="item audio"><span class="text">استماع الدرس (17): الرَّومُ والإشمامُ</span><span class="soon-badge">⏳ قريبًا</span></div>
+        <div class="item audio"><span class="text">استماع الدرس (18): التقاءُ السَّاكنَينِ</span><span class="soon-badge">⏳ قريبًا</span></div>
+        <div class="item audio"><span class="text">استماع الدرس (19): مُلاحظاتٌ حولَ قراءةِ حَفْصٍ</span><span class="soon-badge">⏳ قريبًا</span></div>
+        <div class="item audio"><span class="text">استماع الدرس (20): القُرَّاءُ العشرةُ ورواتُهم</span><span class="soon-badge">⏳ قريبًا</span></div>
+        <div class="item audio"><span class="text">استماع الدرس (21): الهمزةُ الأوَّليَّةُ (الوَصْلُ، والقَطْعُ)</span><span class="soon-badge">⏳ قريبًا</span></div>
+        <div class="item audio"><span class="text">استماع الدرس (22): الرَّسمُ العُثمانيُّ للمُصحَفِ الشَّريفِ</span><span class="soon-badge">⏳ قريبًا</span></div>
+        <div class="item audio"><span class="text">استماع الدرس (23): فَوائدُ تجويديَّةٌ</span><span class="soon-badge">⏳ قريبًا</span></div>
+        <div class="item audio"><span class="text">استماع الدرس (24): لَطائفُ قُرآنيَّةٌ</span><span class="soon-badge">⏳ قريبًا</span></div>
+        <div class="item audio"><span class="text">استماع الدرس (25): ثَمَراتٌ مُتَّصِلةٌ</span><span class="soon-badge">⏳ قريبًا</span></div>
 
     </div>
 
-    <!-- زر تحميل جميع الصوتيات -->
-    <!-- غيّر audios.zip عند رفع الملف -->
     <a href="audios.zip" class="bulk-download-btn audio">
         ⬇️ تحميل جميع الصوتيات كملف واحد
     </a>
 
-    <!-- فاصل زخرفي قبل حقوق النشر -->
     <div class="section-divider"></div>
 
-    <!-- حقوق النشر -->
     <div class="copyright">
         📌 يُسمح بالنسخ والمشاركة والنشر دون قيود.
     </div>
 
-    <!-- أزرار المشاركة بعد حقوق النشر -->
     <div class="share-area">
         <div class="share-title">شارك الكتاب مع الأحبة</div>
         <div class="share-buttons">
-            <!-- يمكنك تعديل رابط الموقع في المعاملات حسب عنوان صفحتك -->
             <a class="share-btn whatsapp"
                href="https://wa.me/?text=%D8%AF%D9%84%D9%8A%D9%84%20%D8%A3%D8%AD%D9%83%D8%A7%D9%85%20%D8%A7%D9%84%D8%AA%D8%AC%D9%88%D9%8A%D8%AF%20-%20https%3A%2F%2Feyada1977.github.io"
                target="_blank" rel="noopener noreferrer">
