@@ -25,30 +25,14 @@
             backdrop-filter: blur(8px);
         }
 
-        /* حركة العنوان */
-        @keyframes titleShow {
-            0% {
-                opacity: 0;
-                transform: translateY(-15px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* عنوان الصفحة الرئيسي بخط ذهبي فخم */
+        /* العنوان الرئيسي */
         h1 {
             font-family: "Amiri", "Cairo", serif;
-            color: #c89b2b; /* ذهبي أغمق قليلاً */
+            color: #0b4d27; /* أخضر أنيق */
             margin-bottom: 10px;
             font-size: 24px; /* تصغير درجة واحدة */
             font-weight: 900;
-            letter-spacing: 0.8px;
-            text-shadow:
-                0 0 6px rgba(200,155,43,0.5),
-                0 0 12px rgba(200,155,43,0.3);
-            animation: titleShow 1.2s ease-out forwards;
+            letter-spacing: 0.5px;
         }
 
         .subtitle {
@@ -64,7 +48,7 @@
             margin-bottom: 25px;
         }
 
-        /* زر تحميل الكتاب PDF */
+        /* زر PDF */
         .download-main-wrapper {
             display: flex;
             justify-content: center;
@@ -72,18 +56,17 @@
         }
 
         .download-main-btn {
-            position: relative;
             padding: 14px 28px;
             font-size: 16px;
             font-weight: 700;
             border-radius: 14px;
-            border: 2px solid #d4af37; /* ذهبي */
+            border: 2px solid #d4af37;
             cursor: pointer;
             text-decoration: none;
             color: #ffffff;
             background: linear-gradient(135deg, #b47b5d, #8c6b4c);
             box-shadow: 0 0 12px rgba(212,175,55,0.5);
-            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            transition: 0.25s;
         }
 
         .download-main-btn:hover {
@@ -103,20 +86,13 @@
             text-align: right;
         }
 
-        .section-title.video {
-            background: #0f7b3a;
-        }
+        .section-title.video { background: #0f7b3a; }
+        .section-title.audio { background: #274b8f; }
 
-        .section-title.audio {
-            background: #274b8f;
-        }
-
-        .items-wrapper {
-            text-align: right;
-        }
+        .items-wrapper { text-align: right; }
 
         .item {
-            background: #d1fae5; /* المرئي: أخضر فاتح */
+            background: #d1fae5;
             padding: 10px 12px;
             margin: 6px 0;
             border-radius: 8px;
@@ -128,23 +104,15 @@
         }
 
         .item.audio {
-            background: #dde7ff; /* للصوتيات لون أزرق فاتح */
-        }
-
-        .item span.text {
-            flex: 1;
-            margin-left: 8px;
+            background: #dde7ff;
         }
 
         .soon-badge {
             color: #b91c1c;
             font-weight: bold;
-            margin-right: 10px;
-            font-size: 16px;
-            white-space: nowrap;
         }
 
-        /* أزرار تحميل جميع الفيديوهات/الصوتيات في الأسفل */
+        /* زر تحميل جميع الفيديوهات والصوتيات */
         .bulk-download-btn {
             display: block;
             width: 95%;
@@ -153,26 +121,22 @@
             font-size: 17px;
             font-weight: 800;
             border-radius: 10px;
-            border: none;
-            cursor: pointer;
+            color: #fff;
             text-decoration: none;
-            color: #ffffff;
-            text-align: center;
             transition: 0.25s;
         }
 
-        .bulk-download-btn.video {
-            background: #15803d;
-        }
+        .bulk-download-btn.video { background: #15803d; }
 
+        /* تخفيف لون زر الصوتيات */
         .bulk-download-btn.audio {
-            background: #1d4ed8;
+            background: #3b6ee0;  /* أزرق هادئ */
         }
 
         .bulk-download-btn:hover {
+            transform: translateY(-2px);
             filter: brightness(1.07);
-            transform: translateY(-1px);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.18);
+            box-shadow: 0 6px 14px rgba(0,0,0,0.22);
         }
 
         /* حقوق النشر */
@@ -190,13 +154,14 @@
 
         /* منطقة المشاركة */
         .share-area {
-            margin-top: 18px;
+            margin-top: 22px;
         }
 
+        /* تكبير الخط + تغميق اللون */
         .share-title {
-            font-size: 15px;
+            font-size: 17px;     /* كان 15px */
             font-weight: 800;
-            color: #e11d48; /* أحمر فاتح */
+            color: #c51033;      /* أغمق قليلاً */
             margin-bottom: 10px;
         }
 
@@ -236,7 +201,7 @@
         .share-icon {
             width: 22px;
             height: 22px;
-            filter: brightness(0) invert(1); /* الأيقونة باللون الأبيض */
+            filter: brightness(0) invert(1);
         }
 
         .share-label {
@@ -245,17 +210,9 @@
             color: #111827;
         }
 
-        .share-btn.whatsapp {
-            background: #25D366;
-        }
-
-        .share-btn.telegram {
-            background: #0088cc;
-        }
-
-        .share-btn.facebook {
-            background: #1877F2;
-        }
+        .whatsapp { background: #25D366; }
+        .telegram { background: #0088cc; }
+        .facebook { background: #1877F2; }
 
         /* زر العودة للأعلى */
         #backToTop {
@@ -298,21 +255,17 @@
     <h1>المحتوى المرئي والصوتي للكتاب</h1>
     <div class="subtitle">سيتم تفعيل الروابط لاحقًا بإذن الله.</div>
 
-    <!-- صورة الغلاف -->
     <img src="cover.jpg" class="cover" alt="غلاف الكتاب">
 
-    <!-- زر تحميل الكتاب PDF (تحت صورة الغلاف) -->
     <div class="download-main-wrapper">
-        <!-- غيّر href إلى رابط الـ PDF الحقيقي عند توفره -->
-        <a href="#" class="download-main-btn">
-            📥 تحميل الكتاب PDF
-        </a>
+        <a href="#" class="download-main-btn">📥 تحميل الكتاب PDF</a>
     </div>
 
     <!-- المحتوى المرئي -->
     <div class="section-title video">📘 المحتوى المرئي (الفيديوهات)</div>
     <div class="items-wrapper">
 
+        <!-- قائمة الدروس المرئية كاملة -->
         <div class="item"><span class="text">المقدّمة</span><span class="soon-badge">⏳ قريبًا</span></div>
 
         <div class="item"><span class="text">مشاهدة الدرس (1): القرآنُ الكريمُ وعِلمُ التَّجويدِ</span><span class="soon-badge">⏳ قريبًا</span></div>
@@ -351,6 +304,7 @@
     <div class="section-title audio">🎧 المحتوى الصوتي (التسجيلات)</div>
     <div class="items-wrapper">
 
+        <!-- قائمة دروس الصوتيات كاملة -->
         <div class="item audio"><span class="text">المقدّمة</span><span class="soon-badge">⏳ قريبًا</span></div>
 
         <div class="item audio"><span class="text">استماع الدرس (1): القرآنُ الكريمُ وعِلمُ التَّجويدِ</span><span class="soon-badge">⏳ قريبًا</span></div>
@@ -380,52 +334,52 @@
         <div class="item audio"><span class="text">استماع الدرس (25): ثَمَراتٌ مُتَّصِلةٌ</span><span class="soon-badge">⏳ قريبًا</span></div>
     </div>
 
-    <!-- زر تحميل جميع الصوتيات في نهاية القسم الصوتي -->
+    <!-- زر تحميل جميع الصوتيات -->
     <a href="#" class="bulk-download-btn audio">
         ⬇️ تحميل جميع الصوتيات كملف واحد
     </a>
 
-    <!-- حقوق النشر -->
+    <!-- حقوق -->
     <div class="copyright">
         📌 يُسمح بالنسخ والمشاركة والنشر دون قيود.
     </div>
 
-    <!-- منطقة المشاركة (بعد عبارة الحقوق) -->
+    <!-- المشاركة -->
     <div class="share-area">
-        <div class="share-title">شارك الكتاب مع الأحبة</div>
+        <div class="share-title">شارك الكتاب مع الأحبّة</div>
+
         <div class="share-buttons">
-            <!-- واتساب -->
+
             <div class="share-item">
                 <a class="share-btn whatsapp"
-                   href="https://wa.me/?text=%D8%AF%D9%84%D9%8A%D9%84%20%D8%A3%D8%AD%D9%83%D8%A7%D9%85%20%D8%A7%D9%84%D8%AA%D8%AC%D9%88%D9%8A%D8%AF%20-%20https%3A%2F%2Feyada1977.github.io"
-                   target="_blank" rel="noopener noreferrer">
+                   href="https://wa.me/?text=https://eyada1977.github.io"
+                   target="_blank">
                     <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
-                         alt="واتساب" class="share-icon">
+                         class="share-icon">
                 </a>
                 <div class="share-label">واتساب</div>
             </div>
 
-            <!-- تيلغرام -->
             <div class="share-item">
                 <a class="share-btn telegram"
-                   href="https://t.me/share/url?url=https%3A%2F%2Feyada1977.github.io&text=%D8%AF%D9%84%D9%8A%D9%84%20%D8%A3%D8%AD%D9%83%D8%A7%D9%85%20%D8%A7%D9%84%D8%AA%D8%AC%D9%88%D9%8A%D8%AF"
-                   target="_blank" rel="noopener noreferrer">
+                   href="https://t.me/share/url?url=https://eyada1977.github.io"
+                   target="_blank">
                     <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/telegram.svg"
-                         alt="تيلغرام" class="share-icon">
+                         class="share-icon">
                 </a>
                 <div class="share-label">تيلغرام</div>
             </div>
 
-            <!-- فيسبوك -->
             <div class="share-item">
                 <a class="share-btn facebook"
-                   href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Feyada1977.github.io"
-                   target="_blank" rel="noopener noreferrer">
+                   href="https://www.facebook.com/sharer/sharer.php?u=https://eyada1977.github.io"
+                   target="_blank">
                     <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg"
-                         alt="فيسبوك" class="share-icon">
+                         class="share-icon">
                 </a>
                 <div class="share-label">فيسبوك</div>
             </div>
+
         </div>
     </div>
 
