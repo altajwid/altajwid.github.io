@@ -5,25 +5,22 @@
     <title>المحتوى المرئي والصوتي للكتاب</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- وسوم المشاركة الاجتماعية -->
+    <!-- وسوم المشاركة الاجتماعية الأساسية -->
     <meta property="og:type" content="website">
     <meta property="og:locale" content="ar_AR">
-
-    <!-- عنوان ووصف المعاينة -->
-    <meta property="og:title" content="كتاب دليل أحكام التجويد – المحتوى المرئي والصوتي (تحميل ومشاهدة واستماع)">
-    <meta property="og:description" content="المحتوى المرئي والصوتي لكتاب دليل أحكام التجويد: تحميل ومشاهدة الفيديوهات والاستماع للتسجيلات.">
     <meta property="og:url" content="https://altajwid.github.io">
-
-    <!-- صورة الغلاف للمعاينة (غلاف الكتاب) -->
-    <meta property="og:image" content="https://altajwid.github.io/cover.jpg?v=2">
-    <meta property="og:image:secure_url" content="https://altajwid.github.io/cover.jpg?v=2">
+    <meta property="og:title" content="كتاب دليل أحكام التجويد">
+    <meta property="og:description" content="كتاب دليل أحكام التجويد – المحتوى المرئي والصوتي للكتاب (تحميل ومشاهدة واستماع)">
+    <!-- صورة الغلاف (مع كسر كاش عبر v=5) -->
+    <meta property="og:image" content="https://altajwid.github.io/cover.jpg?v=5">
+    <meta property="og:image:secure_url" content="https://altajwid.github.io/cover.jpg?v=5">
     <meta property="og:image:alt" content="غلاف كتاب دليل أحكام التجويد">
 
     <!-- بطاقة تويتر -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="كتاب دليل أحكام التجويد – المحتوى المرئي والصوتي (تحميل ومشاهدة واستماع)">
-    <meta name="twitter:description" content="المحتوى المرئي والصوتي لكتاب دليل أحكام التجويد: تحميل ومشاهدة الفيديوهات والاستماع للتسجيلات.">
-    <meta name="twitter:image" content="https://altajwid.github.io/cover.jpg?v=2">
+    <meta name="twitter:title" content="كتاب دليل أحكام التجويد">
+    <meta name="twitter:description" content="كتاب دليل أحكام التجويد – المحتوى المرئي والصوتي للكتاب (تحميل ومشاهدة واستماع)">
+    <meta name="twitter:image" content="https://altajwid.github.io/cover.jpg?v=5">
 
     <style>
         body {
@@ -52,7 +49,6 @@
             margin-bottom: 10px;
             font-size: 24px;
             font-weight: 900;
-            letter-spacing: 0.5px;
         }
 
         .subtitle {
@@ -163,7 +159,6 @@
             padding: 12px;
             border-radius: 10px;
             border: 1px solid #e6d68a;
-            text-align: center;
         }
 
         /* منطقة المشاركة */
@@ -180,7 +175,7 @@
             display: flex;
             justify-content: center;
             gap: 10px;
-            flex-wrap: wrap; /* لظهور كل الأيقونات على الجوال */
+            flex-wrap: wrap; /* ليتكيّف مع شاشة الجوال */
         }
 
         .share-item {
@@ -270,7 +265,7 @@
     <!-- صورة الغلاف -->
     <img src="cover.jpg" class="cover" alt="غلاف الكتاب">
 
-    <!-- زر التحميل -->
+    <!-- زر تحميل PDF -->
     <div class="download-main-wrapper">
         <a href="#" class="download-main-btn">📥 تحميل الكتاب PDF</a>
     </div>
@@ -306,7 +301,6 @@
         <div class="item"><span class="text">مشاهدة الدرس (23): فَوائدُ تجويديَّةٌ</span><span class="soon-badge">⏳ قريبًا</span></div>
         <div class="item"><span class="text">مشاهدة الدرس (24): لَطائفُ قُرآنيَّةٌ</span><span class="soon-badge">⏳ قريبًا</span></div>
         <div class="item"><span class="text">مشاهدة الدرس (25): ثَمَراتٌ مُتَّصِلةٌ</span><span class="soon-badge">⏳ قريبًا</span></div>
-
     </div>
 
     <a href="#" class="bulk-download-btn video">
@@ -344,7 +338,6 @@
         <div class="item audio"><span class="text">استماع الدرس (23): فَوائدُ تجويديَّةٌ</span><span class="soon-badge">⏳ قريبًا</span></div>
         <div class="item audio"><span class="text">استماع الدرس (24): لَطائفُ قُرآنيَّةٌ</span><span class="soon-badge">⏳ قريبًا</span></div>
         <div class="item audio"><span class="text">استماع الدرس (25): ثَمَراتٌ مُتَّصِلةٌ</span><span class="soon-badge">⏳ قريبًا</span></div>
-
     </div>
 
     <a href="#" class="bulk-download-btn audio">
@@ -364,7 +357,7 @@
             <div class="share-item">
                 <a class="share-btn whatsapp"
                    href="https://wa.me/?text=https://altajwid.github.io%0Aكتاب%20(دليل%20أحكام%20التجويد)"
-                   target="_blank">
+                   target="_blank" rel="noopener">
                     <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" class="share-icon" alt="واتساب">
                 </a>
                 <div class="share-label">واتساب</div>
@@ -374,7 +367,7 @@
             <div class="share-item">
                 <a class="share-btn telegram"
                    href="https://t.me/share/url?url=https://altajwid.github.io&text=كتاب%20(دليل%20أحكام%20التجويد)"
-                   target="_blank">
+                   target="_blank" rel="noopener">
                     <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/telegram.svg" class="share-icon" alt="تيلغرام">
                 </a>
                 <div class="share-label">تيلغرام</div>
@@ -384,17 +377,17 @@
             <div class="share-item">
                 <a class="share-btn facebook"
                    href="https://www.facebook.com/sharer/sharer.php?u=https://altajwid.github.io"
-                   target="_blank">
+                   target="_blank" rel="noopener">
                     <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" class="share-icon" alt="فيسبوك">
                 </a>
                 <div class="share-label">فيسبوك</div>
             </div>
 
-            <!-- تويتر -->
+            <!-- تويتر / X -->
             <div class="share-item">
                 <a class="share-btn twitter"
                    href="https://twitter.com/intent/tweet?url=https://altajwid.github.io&text=كتاب%20(دليل%20أحكام%20التجويد)"
-                   target="_blank">
+                   target="_blank" rel="noopener">
                     <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg" class="share-icon" alt="تويتر">
                 </a>
                 <div class="share-label">تويتر</div>
