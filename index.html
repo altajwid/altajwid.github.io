@@ -5,20 +5,21 @@
     <title>دليل أحكام التجويد – المحتوى المرئي والصوتي للكتاب</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- وسوم المشاركة الاجتماعية (تُستخدم مع الرابط في واتساب وغيره) -->
+    <!-- وسوم المشاركة الاجتماعية (صورة غلاف الكتاب) -->
     <meta property="og:type" content="website">
     <meta property="og:locale" content="ar_AR">
     <meta property="og:title" content="دليل أحكام التجويد – المحتوى المرئي والصوتي للكتاب">
     <meta property="og:description" content="كتاب دليل أحكام التجويد – مشاهدة وتحميل الدروس المرئية والصوتية.">
     <meta property="og:url" content="https://altajwid.github.io">
-    <meta property="og:image" content="https://altajwid.github.io/cover.jpg">
+    <meta property="og:image" content="https://altajwid.github.io/cover.jpg?v=3">
+    <meta property="og:image:secure_url" content="https://altajwid.github.io/cover.jpg?v=3">
     <meta property="og:image:alt" content="غلاف كتاب دليل أحكام التجويد">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="دليل أحكام التجويد – المحتوى المرئي والصوتي">
+    <meta name="twitter:title" content="دليل أحكام التجويد – المحتوى المرئي والصوتي للكتاب">
     <meta name="twitter:description" content="كتاب دليل أحكام التجويد – مشاهدة وتحميل الدروس المرئية والصوتية.">
-    <meta name="twitter:image" content="https://altajwid.github.io/cover.jpg">
+    <meta name="twitter:image" content="https://altajwid.github.io/cover.jpg?v=3">
 
     <style>
         body {
@@ -174,7 +175,7 @@
         .share-buttons {
             display: flex;
             justify-content: center;
-            gap: 10px; /* تقليل المسافة ليظهروا في سطر واحد في الجوال */
+            gap: 10px; /* مسافة أقل ليدخلوا في سطر واحد بالجوال */
             flex-wrap: wrap;
         }
 
@@ -262,7 +263,7 @@
     <h1>المحتوى المرئي والصوتي للكتاب</h1>
     <div class="subtitle">سيتم تفعيل الروابط لاحقًا بإذن الله.</div>
 
-    <!-- صورة غلاف الكتاب داخل الصفحة -->
+    <!-- صورة غلاف الكتاب -->
     <img src="cover.jpg" class="cover" alt="غلاف كتاب دليل أحكام التجويد">
 
     <div class="download-main-wrapper">
@@ -352,7 +353,6 @@
 
         <div class="share-buttons">
 
-            <!-- واتساب -->
             <div class="share-item">
                 <a class="share-btn whatsapp" id="share-whatsapp" href="#" target="_blank">
                     <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" class="share-icon">
@@ -360,7 +360,6 @@
                 <div class="share-label">واتساب</div>
             </div>
 
-            <!-- تيلغرام -->
             <div class="share-item">
                 <a class="share-btn telegram" id="share-telegram" href="#" target="_blank">
                     <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/telegram.svg" class="share-icon">
@@ -368,7 +367,6 @@
                 <div class="share-label">تيلغرام</div>
             </div>
 
-            <!-- فيسبوك -->
             <div class="share-item">
                 <a class="share-btn facebook" id="share-facebook" href="#" target="_blank">
                     <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" class="share-icon">
@@ -376,7 +374,6 @@
                 <div class="share-label">فيسبوك</div>
             </div>
 
-            <!-- تويتر -->
             <div class="share-item">
                 <a class="share-btn twitter" id="share-twitter" href="#" target="_blank">
                     <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg" class="share-icon">
@@ -396,7 +393,7 @@
     const currentURL = window.location.href;
     const shareText = "كتاب (دليل أحكام التجويد) – " + currentURL;
 
-    // إعداد روابط المشاركة بالنص المطلوب
+    // إعداد روابط المشاركة
     document.getElementById("share-whatsapp").href =
         "https://wa.me/?text=" + encodeURIComponent(shareText);
 
