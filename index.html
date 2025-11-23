@@ -61,7 +61,7 @@
         /* بطاقة الغلاف */
         .cover-card {
             width: 85%;
-            margin: 0 auto 25px;
+            margin: 0 auto 20px; /* تقليل المسافة أسفل الغلاف قليلاً */
             background: linear-gradient(180deg, #fefaf3, #f3e5d8);
             border-radius: 20px;
             padding: 16px;
@@ -78,11 +78,11 @@
         .download-main-wrapper {
             display: flex;
             justify-content: center;
-            margin-bottom: 25px;
+            margin: 10px auto 22px; /* رفع الزر درجة (أقرب للغلاف) وتقليل المسافة تحته قليلاً */
         }
 
         .download-main-btn {
-            padding: 14px 32px;           /* أصغر قليلاً من قبل */
+            padding: 12px 36px;   /* أقصر بدرجة من السابق */
             font-size: 17px;
             font-weight: 700;
             border-radius: 16px;
@@ -93,22 +93,12 @@
             background: linear-gradient(135deg, #b47b5d, #8c6b4c);
             box-shadow: 0 0 16px rgba(212,175,55,0.6);
             transition: 0.25s;
-            animation: pulse 2s infinite; /* نبض خفيف */
-            width: 70%;
-            max-width: 420px;              /* ليكون أضيق من الأزرار الأخرى */
-            min-width: 220px;
-            text-align: center;
+            /* تم إلغاء النبض: لا يوجد animation هنا */
         }
 
         .download-main-btn:hover {
             transform: translateY(-2px) scale(1.02);
             box-shadow: 0 0 22px rgba(212,175,55,0.9);
-        }
-
-        @keyframes pulse {
-            0%   { transform: scale(1);   box-shadow: 0 0 16px rgba(212,175,55,0.6); }
-            50%  { transform: scale(1.03); box-shadow: 0 0 24px rgba(212,175,55,0.9); }
-            100% { transform: scale(1);   box-shadow: 0 0 16px rgba(212,175,55,0.6); }
         }
 
         /* فاصل بين الأقسام */
@@ -123,12 +113,12 @@
         .accordion-header {
             width: 100%;
             border-radius: 12px;
-            padding: 14px 16px;   /* أكبر قليلاً */
+            padding: 14px 16px; /* تكبير بسيط للزرين الثاني والثالث */
             margin: 10px 0;
             border: none;
             cursor: pointer;
             color: #fff;
-            font-size: 18px;      /* تكبير حجم الخط */
+            font-size: 18px;  /* تكبير الخط */
             font-weight: 800;
             display: flex;
             align-items: center;
@@ -174,7 +164,7 @@
             background: rgba(255,255,255,0.18);
             border-radius: 999px;
             padding: 2px 10px;
-            font-size: 14px;
+            font-size: 13px;
             margin-right: 6px;
         }
 
@@ -325,13 +315,8 @@
             }
 
             .download-main-btn {
-                width: 85%;   /* يبقى أصغر من عرض الأكورديون */
+                width: 100%;
                 padding: 12px;
-            }
-
-            .accordion-header {
-                font-size: 17px;
-                padding: 12px 14px;
             }
         }
     </style>
@@ -349,7 +334,7 @@
         <img src="cover.jpg" class="cover" alt="غلاف كتاب دليل أحكام التجويد">
     </div>
 
-    <!-- زر تحميل الكتاب PDF (أصغر من الأزرار الأخرى) -->
+    <!-- زر تحميل الكتاب PDF -->
     <div class="download-main-wrapper">
         <!-- غيّر href إلى رابط الـ PDF الحقيقي عند توفره -->
         <a href="#" class="download-main-btn">📥 تحميل الكتاب PDF</a>
