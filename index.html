@@ -10,7 +10,6 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- منع تكبير الخط تلقائيًا على بعض أجهزة أندرويد -->
     <meta name="format-detection" content="telephone=no">
 
     <meta
@@ -42,6 +41,10 @@
         content="https://altajwid.github.io/cover.jpg">
 
     <meta
+        property="og:image:url"
+        content="https://altajwid.github.io/cover.jpg">
+
+    <meta
         property="og:image:secure_url"
         content="https://altajwid.github.io/cover.jpg">
 
@@ -65,6 +68,15 @@
         property="og:locale"
         content="ar_AR">
 
+    <!-- تعريف إضافي للصورة -->
+    <link
+        rel="image_src"
+        href="https://altajwid.github.io/cover.jpg">
+
+    <meta
+        itemprop="image"
+        content="https://altajwid.github.io/cover.jpg">
+
 
     <!-- =============================== -->
     <!-- بيانات منصة X -->
@@ -85,6 +97,27 @@
     <meta
         name="twitter:image"
         content="https://altajwid.github.io/cover.jpg">
+
+
+    <!-- =============================== -->
+    <!-- بيانات منظمة إضافية للصورة -->
+    <!-- =============================== -->
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Book",
+        "name": "كتاب دليل أحكام التجويد",
+        "url": "https://altajwid.github.io/",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://altajwid.github.io/cover.jpg",
+            "width": 984,
+            "height": 1452
+        },
+        "description": "النسخة الإلكترونية من كتاب دليل أحكام التجويد"
+    }
+    </script>
 
 
     <style>
@@ -115,11 +148,6 @@
             backdrop-filter: blur(8px);
         }
 
-
-        /* =============================== */
-        /* العنوان الرئيسي */
-        /* =============================== */
-
         h1 {
             font-family: "Amiri", "Cairo", serif;
             color: #0b4d27;
@@ -145,11 +173,6 @@
             margin-bottom: 25px;
         }
 
-
-        /* =============================== */
-        /* زر تحميل الكتاب */
-        /* =============================== */
-
         .download-main-wrapper {
             display: flex;
             justify-content: center;
@@ -161,35 +184,26 @@
             align-items: center;
             justify-content: center;
             gap: 10px;
-
             width: 88%;
             max-width: 340px;
             box-sizing: border-box;
-
             padding: 14px 24px;
-
             font-size: 19px;
             font-weight: 800;
             line-height: 1.4;
-
             border-radius: 14px;
             border: 2px solid #d4af37;
-
             cursor: pointer;
             text-decoration: none;
-
             color: #ffffff;
-
             background: linear-gradient(
                 135deg,
                 #5f3d21,
                 #7c522c
             );
-
             box-shadow:
                 0 6px 16px rgba(85,55,30,0.32),
                 0 0 0 3px rgba(212,175,55,0.10);
-
             transition:
                 transform 0.25s ease,
                 box-shadow 0.25s ease,
@@ -200,27 +214,20 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-
             width: 34px;
             height: 34px;
-
             flex-shrink: 0;
-
             border-radius: 9px;
-
             background: rgba(255,255,255,0.15);
-
             font-size: 20px;
             line-height: 1;
         }
 
         .download-main-btn:hover {
             transform: translateY(-2px);
-
             box-shadow:
                 0 9px 22px rgba(85,55,30,0.38),
                 0 0 0 3px rgba(212,175,55,0.17);
-
             filter: brightness(1.08);
         }
 
@@ -229,25 +236,15 @@
             outline-offset: 3px;
         }
 
-
-        /* =============================== */
-        /* عناوين الأقسام */
-        /* =============================== */
-
         .section-title {
             font-size: 20px;
             font-weight: 800;
             line-height: 1.4;
-
             padding: 10px 12px;
-
             color: #fff;
-
             border-radius: 12px;
-
             margin-top: 25px;
             margin-bottom: 15px;
-
             text-align: right;
         }
 
@@ -259,11 +256,6 @@
             background: #26427c;
         }
 
-
-        /* =============================== */
-        /* القوائم المنسدلة */
-        /* =============================== */
-
         .content-dropdown {
             margin-top: 25px;
         }
@@ -272,9 +264,7 @@
             list-style: none;
             cursor: pointer;
             position: relative;
-
             padding-left: 48px;
-
             user-select: none;
         }
 
@@ -289,17 +279,13 @@
 
         .dropdown-arrow {
             position: absolute;
-
             left: 15px;
             top: 50%;
-
             transform:
                 translateY(-50%)
                 rotate(0deg);
-
             font-size: 22px;
             font-weight: bold;
-
             transition: transform 0.25s ease;
         }
 
@@ -309,36 +295,22 @@
                 rotate(180deg);
         }
 
-
-        /* =============================== */
-        /* عناصر الدروس */
-        /* =============================== */
-
         .items-wrapper {
             text-align: right;
         }
 
         .item {
             background: #d1fae5;
-
             padding: 10px 12px;
-
             margin: 6px 0;
-
             border-radius: 8px;
-
             display: flex;
-
             justify-content: space-between;
-
             align-items: center;
-
             font-size: 15px;
             font-weight: 600;
             line-height: 1.55;
-
             border-right: 4px solid #16a34a;
-
             transition:
                 transform 0.18s ease,
                 box-shadow 0.18s ease,
@@ -358,24 +330,16 @@
 
         .soon-badge {
             color: #b91c1c;
-
             font-weight: bold;
-
             margin-right: 10px;
-
             font-size: 16px;
-
             white-space: nowrap;
-
             flex-shrink: 0;
         }
 
         .item:hover {
             transform: translateY(-2px);
-
-            box-shadow:
-                0 4px 10px rgba(0,0,0,0.16);
-
+            box-shadow: 0 4px 10px rgba(0,0,0,0.16);
             background-color: #bbf7d0;
         }
 
@@ -383,34 +347,18 @@
             background-color: #c7d8ff;
         }
 
-
-        /* =============================== */
-        /* أزرار تحميل المحتوى */
-        /* =============================== */
-
         .bulk-download-btn {
             display: block;
-
             width: 95%;
-
             box-sizing: border-box;
-
             margin: 10px auto 0;
-
             padding: 12px;
-
             font-size: 17px;
-
             font-weight: 800;
-
             line-height: 1.5;
-
             border-radius: 10px;
-
             color: #ffffff;
-
             text-decoration: none;
-
             transition: 0.25s;
         }
 
@@ -424,44 +372,22 @@
 
         .bulk-download-btn:hover {
             transform: translateY(-2px);
-
             filter: brightness(1.07);
-
-            box-shadow:
-                0 6px 14px rgba(0,0,0,0.22);
+            box-shadow: 0 6px 14px rgba(0,0,0,0.22);
         }
-
-
-        /* =============================== */
-        /* حقوق النشر */
-        /* =============================== */
 
         .copyright {
             margin-top: 30px;
-
             font-size: 16px;
-
             font-weight: 800;
-
             color: #b58a00;
-
             background: #fff6cc;
-
             padding: 12px;
-
             border-radius: 10px;
-
             border: 1px solid #e6d68a;
-
             text-align: center;
-
             line-height: 1.6;
         }
-
-
-        /* =============================== */
-        /* المشاركة */
-        /* =============================== */
 
         .share-area {
             margin-top: 22px;
@@ -469,52 +395,35 @@
 
         .share-title {
             font-size: 17px;
-
             font-weight: 800;
-
             color: #c51033;
-
             margin-bottom: 10px;
         }
 
         .share-buttons {
             display: flex;
-
             justify-content: center;
-
             gap: 18px;
-
             flex-wrap: wrap;
         }
 
         .share-item {
             display: flex;
-
             flex-direction: column;
-
             align-items: center;
-
             gap: 6px;
-
             min-width: 70px;
         }
 
         .share-btn {
             width: 48px;
             height: 48px;
-
             border-radius: 50%;
-
             display: flex;
-
             align-items: center;
             justify-content: center;
-
             text-decoration: none;
-
-            box-shadow:
-                0 4px 10px rgba(0,0,0,0.16);
-
+            box-shadow: 0 4px 10px rgba(0,0,0,0.16);
             transition: 0.25s;
         }
 
@@ -522,17 +431,13 @@
             transform:
                 translateY(-2px)
                 scale(1.03);
-
             filter: brightness(1.05);
-
-            box-shadow:
-                0 6px 14px rgba(0,0,0,0.22);
+            box-shadow: 0 6px 14px rgba(0,0,0,0.22);
         }
 
         .share-icon {
             width: 22px;
             height: 22px;
-
             filter:
                 brightness(0)
                 invert(1);
@@ -570,63 +475,36 @@
             background: #000000;
         }
 
-
-        /* =============================== */
-        /* زر العودة للأعلى */
-        /* =============================== */
-
         #backToTop {
             position: fixed;
-
             bottom: 22px;
             left: 22px;
-
             width: 48px;
             height: 48px;
-
             background: #0b4d27;
-
             color: #fff;
-
             border-radius: 50%;
-
             font-size: 22px;
-
             display: flex;
-
             justify-content: center;
             align-items: center;
-
             cursor: pointer;
-
-            box-shadow:
-                0 5px 12px rgba(0,0,0,0.25);
-
+            box-shadow: 0 5px 12px rgba(0,0,0,0.25);
             transition: 0.3s;
-
             opacity: 0;
-
             visibility: hidden;
-
             z-index: 999;
         }
 
         #backToTop:hover {
             transform: translateY(-3px);
-
             background: #0a401f;
         }
 
         #backToTop.show {
             opacity: 1;
-
             visibility: visible;
         }
-
-
-        /* =============================== */
-        /* تحسين العرض على الهواتف */
-        /* =============================== */
 
         @media (max-width: 600px) {
 
@@ -691,6 +569,45 @@
 
 <body>
 
+<!-- تعريف إضافي مخفي للكتاب والصورة -->
+<div
+    itemscope
+    itemtype="https://schema.org/Book"
+    style="display:none;">
+
+    <meta
+        itemprop="name"
+        content="كتاب دليل أحكام التجويد">
+
+    <link
+        itemprop="url"
+        href="https://altajwid.github.io/">
+
+    <link
+        itemprop="image"
+        href="https://altajwid.github.io/cover.jpg">
+
+    <span
+        itemprop="thumbnail"
+        itemscope
+        itemtype="https://schema.org/ImageObject">
+
+        <link
+            itemprop="url"
+            href="https://altajwid.github.io/cover.jpg">
+
+        <meta
+            itemprop="width"
+            content="984">
+
+        <meta
+            itemprop="height"
+            content="1452">
+
+    </span>
+
+</div>
+
 
 <div class="container">
 
@@ -708,13 +625,11 @@
     <img
         src="cover.jpg"
         class="cover"
+        width="984"
+        height="1452"
         alt="غلاف كتاب دليل أحكام التجويد"
     >
 
-
-    <!-- =============================== -->
-    <!-- زر تحميل الكتاب -->
-    <!-- =============================== -->
 
     <div class="download-main-wrapper">
 
@@ -739,11 +654,6 @@
     </div>
 
 
-
-    <!-- =============================== -->
-    <!-- المحتوى المرئي -->
-    <!-- =============================== -->
-
     <details class="content-dropdown">
 
         <summary class="section-title video">
@@ -765,177 +675,127 @@
             </div>
 
             <div class="item">
-                <span class="text">
-                    مشاهدة الدرس (1): القرآنُ الكريمُ وعِلمُ التَّجويدِ
-                </span>
+                <span class="text">مشاهدة الدرس (1): القرآنُ الكريمُ وعِلمُ التَّجويدِ</span>
                 <span class="soon-badge">⏳ قريبًا</span>
             </div>
 
             <div class="item">
-                <span class="text">
-                    مشاهدة الدرس (2): الاستِعاذةُ والبسْملةُ
-                </span>
+                <span class="text">مشاهدة الدرس (2): الاستِعاذةُ والبسْملةُ</span>
                 <span class="soon-badge">⏳ قريبًا</span>
             </div>
 
             <div class="item">
-                <span class="text">
-                    مشاهدة الدرس (3): أحكامُ النُّونِ السَّاكنةِ والتَّنوينِ
-                </span>
+                <span class="text">مشاهدة الدرس (3): أحكامُ النُّونِ السَّاكنةِ والتَّنوينِ</span>
                 <span class="soon-badge">⏳ قريبًا</span>
             </div>
 
             <div class="item">
-                <span class="text">
-                    مشاهدة الدرس (4): أحكامُ الميمِ السَّاكنةِ
-                </span>
+                <span class="text">مشاهدة الدرس (4): أحكامُ الميمِ السَّاكنةِ</span>
                 <span class="soon-badge">⏳ قريبًا</span>
             </div>
 
             <div class="item">
-                <span class="text">
-                    مشاهدة الدرس (5): الغُنَّةُ وحُرُوفُها
-                </span>
+                <span class="text">مشاهدة الدرس (5): الغُنَّةُ وحُرُوفُها</span>
                 <span class="soon-badge">⏳ قريبًا</span>
             </div>
 
             <div class="item">
-                <span class="text">
-                    مشاهدة الدرس (6): المُدود
-                </span>
+                <span class="text">مشاهدة الدرس (6): المُدود</span>
                 <span class="soon-badge">⏳ قريبًا</span>
             </div>
 
             <div class="item">
-                <span class="text">
-                    مشاهدة الدرس (7): مَخارِجُ الحُرُوفِ
-                </span>
+                <span class="text">مشاهدة الدرس (7): مَخارِجُ الحُرُوفِ</span>
                 <span class="soon-badge">⏳ قريبًا</span>
             </div>
 
             <div class="item">
-                <span class="text">
-                    مشاهدة الدرس (8): صِفاتُ الحُرُوفِ
-                </span>
+                <span class="text">مشاهدة الدرس (8): صِفاتُ الحُرُوفِ</span>
                 <span class="soon-badge">⏳ قريبًا</span>
             </div>
 
             <div class="item">
-                <span class="text">
-                    مشاهدة الدرس (9): الـ التَّعريفِ الشَّمسيَّةُ والقمريَّةُ
-                </span>
+                <span class="text">مشاهدة الدرس (9): الـ التَّعريفِ الشَّمسيَّةُ والقمريَّةُ</span>
                 <span class="soon-badge">⏳ قريبًا</span>
             </div>
 
             <div class="item">
-                <span class="text">
-                    مشاهدة الدرس (10): اللَّاماتُ السَّواكنُ
-                </span>
+                <span class="text">مشاهدة الدرس (10): اللَّاماتُ السَّواكنُ</span>
                 <span class="soon-badge">⏳ قريبًا</span>
             </div>
 
             <div class="item">
-                <span class="text">
-                    مشاهدة الدرس (11): إدغامُ المُتماثِلَينِ والمُتجانسَينِ والمُتقاربَينِ
-                </span>
+                <span class="text">مشاهدة الدرس (11): إدغامُ المُتماثِلَينِ والمُتجانسَينِ والمُتقاربَينِ</span>
                 <span class="soon-badge">⏳ قريبًا</span>
             </div>
 
             <div class="item">
-                <span class="text">
-                    مشاهدة الدرس (12): الحُرُوفُ المُقطَّعةِ
-                </span>
+                <span class="text">مشاهدة الدرس (12): الحُرُوفُ المُقطَّعةِ</span>
                 <span class="soon-badge">⏳ قريبًا</span>
             </div>
 
             <div class="item">
-                <span class="text">
-                    مشاهدة الدرس (13): الألِفاتُ السَّبعةُ
-                </span>
+                <span class="text">مشاهدة الدرس (13): الألِفاتُ السَّبعةُ</span>
                 <span class="soon-badge">⏳ قريبًا</span>
             </div>
 
             <div class="item">
-                <span class="text">
-                    مشاهدة الدرس (14): التَّفخيمُ والتَّرقيق
-                </span>
+                <span class="text">مشاهدة الدرس (14): التَّفخيمُ والتَّرقيق</span>
                 <span class="soon-badge">⏳ قريبًا</span>
             </div>
 
             <div class="item">
-                <span class="text">
-                    مشاهدة الدرس (15): الوَقْفُ والابتداءُ
-                </span>
+                <span class="text">مشاهدة الدرس (15): الوَقْفُ والابتداءُ</span>
                 <span class="soon-badge">⏳ قريبًا</span>
             </div>
 
             <div class="item">
-                <span class="text">
-                    مشاهدة الدرس (16): السَّكْتُ
-                </span>
+                <span class="text">مشاهدة الدرس (16): السَّكْتُ</span>
                 <span class="soon-badge">⏳ قريبًا</span>
             </div>
 
             <div class="item">
-                <span class="text">
-                    مشاهدة الدرس (17): الرَّومُ والإشمامُ
-                </span>
+                <span class="text">مشاهدة الدرس (17): الرَّومُ والإشمامُ</span>
                 <span class="soon-badge">⏳ قريبًا</span>
             </div>
 
             <div class="item">
-                <span class="text">
-                    مشاهدة الدرس (18): التقاءُ السَّاكنَينِ
-                </span>
+                <span class="text">مشاهدة الدرس (18): التقاءُ السَّاكنَينِ</span>
                 <span class="soon-badge">⏳ قريبًا</span>
             </div>
 
             <div class="item">
-                <span class="text">
-                    مشاهدة الدرس (19): مُلاحظاتٌ حولَ قراءةِ حَفْصٍ
-                </span>
+                <span class="text">مشاهدة الدرس (19): مُلاحظاتٌ حولَ قراءةِ حَفْصٍ</span>
                 <span class="soon-badge">⏳ قريبًا</span>
             </div>
 
             <div class="item">
-                <span class="text">
-                    مشاهدة الدرس (20): القُرَّاءُ العشرةُ ورواتُهم
-                </span>
+                <span class="text">مشاهدة الدرس (20): القُرَّاءُ العشرةُ ورواتُهم</span>
                 <span class="soon-badge">⏳ قريبًا</span>
             </div>
 
             <div class="item">
-                <span class="text">
-                    مشاهدة الدرس (21): الهمزةُ الأوَّليَّةُ (الوَصْلُ، والقَطْعُ)
-                </span>
+                <span class="text">مشاهدة الدرس (21): الهمزةُ الأوَّليَّةُ (الوَصْلُ، والقَطْعُ)</span>
                 <span class="soon-badge">⏳ قريبًا</span>
             </div>
 
             <div class="item">
-                <span class="text">
-                    مشاهدة الدرس (22): الرَّسمُ العُثمانيُّ للمُصحَفِ الشَّريفِ
-                </span>
+                <span class="text">مشاهدة الدرس (22): الرَّسمُ العُثمانيُّ للمُصحَفِ الشَّريفِ</span>
                 <span class="soon-badge">⏳ قريبًا</span>
             </div>
 
             <div class="item">
-                <span class="text">
-                    مشاهدة الدرس (23): فَوائدُ تجويديَّةٌ
-                </span>
+                <span class="text">مشاهدة الدرس (23): فَوائدُ تجويديَّةٌ</span>
                 <span class="soon-badge">⏳ قريبًا</span>
             </div>
 
             <div class="item">
-                <span class="text">
-                    مشاهدة الدرس (24): لَطائفُ قُرآنيَّةٌ
-                </span>
+                <span class="text">مشاهدة الدرس (24): لَطائفُ قُرآنيَّةٌ</span>
                 <span class="soon-badge">⏳ قريبًا</span>
             </div>
 
             <div class="item">
-                <span class="text">
-                    مشاهدة الدرس (25): ثَمَراتٌ مُتَّصِلةٌ
-                </span>
+                <span class="text">مشاهدة الدرس (25): ثَمَراتٌ مُتَّصِلةٌ</span>
                 <span class="soon-badge">⏳ قريبًا</span>
             </div>
 
@@ -945,18 +805,11 @@
         <a
             href="#"
             class="bulk-download-btn video">
-
             ⬇️ تحميل جميع الفيديوهات كملف واحد
-
         </a>
 
     </details>
 
-
-
-    <!-- =============================== -->
-    <!-- المحتوى الصوتي -->
-    <!-- =============================== -->
 
     <details class="content-dropdown">
 
@@ -979,177 +832,127 @@
             </div>
 
             <div class="item audio">
-                <span class="text">
-                    استماع الدرس (1): القرآنُ الكريمُ وعِلمُ التَّجويدِ
-                </span>
+                <span class="text">استماع الدرس (1): القرآنُ الكريمُ وعِلمُ التَّجويدِ</span>
                 <span class="soon-badge">⏳ قريبًا</span>
             </div>
 
             <div class="item audio">
-                <span class="text">
-                    استماع الدرس (2): الاستِعاذةُ والبسْملةُ
-                </span>
+                <span class="text">استماع الدرس (2): الاستِعاذةُ والبسْملةُ</span>
                 <span class="soon-badge">⏳ قريبًا</span>
             </div>
 
             <div class="item audio">
-                <span class="text">
-                    استماع الدرس (3): أحكامُ النُّونِ السَّاكنةِ والتَّنوينِ
-                </span>
+                <span class="text">استماع الدرس (3): أحكامُ النُّونِ السَّاكنةِ والتَّنوينِ</span>
                 <span class="soon-badge">⏳ قريبًا</span>
             </div>
 
             <div class="item audio">
-                <span class="text">
-                    استماع الدرس (4): أحكامُ الميمِ السَّاكنةِ
-                </span>
+                <span class="text">استماع الدرس (4): أحكامُ الميمِ السَّاكنةِ</span>
                 <span class="soon-badge">⏳ قريبًا</span>
             </div>
 
             <div class="item audio">
-                <span class="text">
-                    استماع الدرس (5): الغُنَّةُ وحُرُوفُها
-                </span>
+                <span class="text">استماع الدرس (5): الغُنَّةُ وحُرُوفُها</span>
                 <span class="soon-badge">⏳ قريبًا</span>
             </div>
 
             <div class="item audio">
-                <span class="text">
-                    استماع الدرس (6): المُدود
-                </span>
+                <span class="text">استماع الدرس (6): المُدود</span>
                 <span class="soon-badge">⏳ قريبًا</span>
             </div>
 
             <div class="item audio">
-                <span class="text">
-                    استماع الدرس (7): مَخارِجُ الحُرُوفِ
-                </span>
+                <span class="text">استماع الدرس (7): مَخارِجُ الحُرُوفِ</span>
                 <span class="soon-badge">⏳ قريبًا</span>
             </div>
 
             <div class="item audio">
-                <span class="text">
-                    استماع الدرس (8): صِفاتُ الحُرُوفِ
-                </span>
+                <span class="text">استماع الدرس (8): صِفاتُ الحُرُوفِ</span>
                 <span class="soon-badge">⏳ قريبًا</span>
             </div>
 
             <div class="item audio">
-                <span class="text">
-                    استماع الدرس (9): الـ التَّعريفِ الشَّمسيَّةُ والقمريَّةُ
-                </span>
+                <span class="text">استماع الدرس (9): الـ التَّعريفِ الشَّمسيَّةُ والقمريَّةُ</span>
                 <span class="soon-badge">⏳ قريبًا</span>
             </div>
 
             <div class="item audio">
-                <span class="text">
-                    استماع الدرس (10): اللَّاماتُ السَّواكنُ
-                </span>
+                <span class="text">استماع الدرس (10): اللَّاماتُ السَّواكنُ</span>
                 <span class="soon-badge">⏳ قريبًا</span>
             </div>
 
             <div class="item audio">
-                <span class="text">
-                    استماع الدرس (11): إدغامُ المُتماثِلَينِ والمُتجانسَينِ والمُتقاربَينِ
-                </span>
+                <span class="text">استماع الدرس (11): إدغامُ المُتماثِلَينِ والمُتجانسَينِ والمُتقاربَينِ</span>
                 <span class="soon-badge">⏳ قريبًا</span>
             </div>
 
             <div class="item audio">
-                <span class="text">
-                    استماع الدرس (12): الحُرُوفُ المُقطَّعةِ
-                </span>
+                <span class="text">استماع الدرس (12): الحُرُوفُ المُقطَّعةِ</span>
                 <span class="soon-badge">⏳ قريبًا</span>
             </div>
 
             <div class="item audio">
-                <span class="text">
-                    استماع الدرس (13): الألِفاتُ السَّبعةُ
-                </span>
+                <span class="text">استماع الدرس (13): الألِفاتُ السَّبعةُ</span>
                 <span class="soon-badge">⏳ قريبًا</span>
             </div>
 
             <div class="item audio">
-                <span class="text">
-                    استماع الدرس (14): التَّفخيمُ والتَّرقيق
-                </span>
+                <span class="text">استماع الدرس (14): التَّفخيمُ والتَّرقيق</span>
                 <span class="soon-badge">⏳ قريبًا</span>
             </div>
 
             <div class="item audio">
-                <span class="text">
-                    استماع الدرس (15): الوَقْفُ والابتداءُ
-                </span>
+                <span class="text">استماع الدرس (15): الوَقْفُ والابتداءُ</span>
                 <span class="soon-badge">⏳ قريبًا</span>
             </div>
 
             <div class="item audio">
-                <span class="text">
-                    استماع الدرس (16): السَّكْتُ
-                </span>
+                <span class="text">استماع الدرس (16): السَّكْتُ</span>
                 <span class="soon-badge">⏳ قريبًا</span>
             </div>
 
             <div class="item audio">
-                <span class="text">
-                    استماع الدرس (17): الرَّومُ والإشمامُ
-                </span>
+                <span class="text">استماع الدرس (17): الرَّومُ والإشمامُ</span>
                 <span class="soon-badge">⏳ قريبًا</span>
             </div>
 
             <div class="item audio">
-                <span class="text">
-                    استماع الدرس (18): التقاءُ السَّاكنَينِ
-                </span>
+                <span class="text">استماع الدرس (18): التقاءُ السَّاكنَينِ</span>
                 <span class="soon-badge">⏳ قريبًا</span>
             </div>
 
             <div class="item audio">
-                <span class="text">
-                    استماع الدرس (19): مُلاحظاتٌ حولَ قراءةِ حَفْصٍ
-                </span>
+                <span class="text">استماع الدرس (19): مُلاحظاتٌ حولَ قراءةِ حَفْصٍ</span>
                 <span class="soon-badge">⏳ قريبًا</span>
             </div>
 
             <div class="item audio">
-                <span class="text">
-                    استماع الدرس (20): القُرَّاءُ العشرةُ ورواتُهم
-                </span>
+                <span class="text">استماع الدرس (20): القُرَّاءُ العشرةُ ورواتُهم</span>
                 <span class="soon-badge">⏳ قريبًا</span>
             </div>
 
             <div class="item audio">
-                <span class="text">
-                    استماع الدرس (21): الهمزةُ الأوَّليَّةُ (الوَصْلُ، والقَطْعُ)
-                </span>
+                <span class="text">استماع الدرس (21): الهمزةُ الأوَّليَّةُ (الوَصْلُ، والقَطْعُ)</span>
                 <span class="soon-badge">⏳ قريبًا</span>
             </div>
 
             <div class="item audio">
-                <span class="text">
-                    استماع الدرس (22): الرَّسمُ العُثمانيُّ للمُصحَفِ الشَّريفِ
-                </span>
+                <span class="text">استماع الدرس (22): الرَّسمُ العُثمانيُّ للمُصحَفِ الشَّريفِ</span>
                 <span class="soon-badge">⏳ قريبًا</span>
             </div>
 
             <div class="item audio">
-                <span class="text">
-                    استماع الدرس (23): فَوائدُ تجويديَّةٌ
-                </span>
+                <span class="text">استماع الدرس (23): فَوائدُ تجويديَّةٌ</span>
                 <span class="soon-badge">⏳ قريبًا</span>
             </div>
 
             <div class="item audio">
-                <span class="text">
-                    استماع الدرس (24): لَطائفُ قُرآنيَّةٌ
-                </span>
+                <span class="text">استماع الدرس (24): لَطائفُ قُرآنيَّةٌ</span>
                 <span class="soon-badge">⏳ قريبًا</span>
             </div>
 
             <div class="item audio">
-                <span class="text">
-                    استماع الدرس (25): ثَمَراتٌ مُتَّصِلةٌ
-                </span>
+                <span class="text">استماع الدرس (25): ثَمَراتٌ مُتَّصِلةٌ</span>
                 <span class="soon-badge">⏳ قريبًا</span>
             </div>
 
@@ -1159,33 +962,18 @@
         <a
             href="#"
             class="bulk-download-btn audio">
-
             ⬇️ تحميل جميع الصوتيات كملف واحد
-
         </a>
 
     </details>
 
 
-
-    <!-- =============================== -->
-    <!-- حقوق النشر -->
-    <!-- =============================== -->
-
     <div class="copyright">
-
         📌 يُسمح بالنسخ والمشاركة والنشر دون قيود.
-
     </div>
 
 
-
-    <!-- =============================== -->
-    <!-- المشاركة -->
-    <!-- =============================== -->
-
     <div class="share-area">
-
 
         <div class="share-title">
             شارك الكتاب مع الأحبّة
@@ -1194,8 +982,6 @@
 
         <div class="share-buttons">
 
-
-            <!-- واتساب -->
 
             <div class="share-item">
 
@@ -1217,9 +1003,6 @@
 
             </div>
 
-
-
-            <!-- تليغرام -->
 
             <div class="share-item">
 
@@ -1244,9 +1027,6 @@
             </div>
 
 
-
-            <!-- فيسبوك -->
-
             <div class="share-item">
 
                 <a
@@ -1270,9 +1050,6 @@
             </div>
 
 
-
-            <!-- إنستغرام -->
-
             <div class="share-item">
 
                 <a
@@ -1295,9 +1072,6 @@
 
             </div>
 
-
-
-            <!-- منصة X -->
 
             <div class="share-item">
 
@@ -1324,26 +1098,17 @@
 
         </div>
 
-
     </div>
 
 
 </div>
 
 
-
-<!-- =============================== -->
-<!-- زر العودة إلى الأعلى -->
-<!-- =============================== -->
-
 <div
     id="backToTop"
     aria-label="العودة إلى أعلى الصفحة">
-
     ⬆️
-
 </div>
-
 
 
 <script>
@@ -1351,35 +1116,26 @@
     const btn =
         document.getElementById("backToTop");
 
-
     window.addEventListener(
         "scroll",
         () => {
 
             if (window.scrollY > 250) {
-
                 btn.classList.add("show");
-
             } else {
-
                 btn.classList.remove("show");
-
             }
 
         }
     );
-
 
     btn.addEventListener(
         "click",
         () => {
 
             window.scrollTo({
-
                 top: 0,
-
                 behavior: "smooth"
-
             });
 
         }
