@@ -10,11 +10,16 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- منع تكبير الخط تلقائيًا على بعض أجهزة أندرويد -->
+    <meta name="format-detection" content="telephone=no">
+
     <meta
         name="description"
         content="النسخة الإلكترونية من كتاب دليل أحكام التجويد">
 
-    <!-- بيانات معاينة الرابط عند المشاركة -->
+    <!-- =============================== -->
+    <!-- بيانات معاينة الرابط -->
+    <!-- =============================== -->
 
     <meta
         property="og:title"
@@ -37,11 +42,33 @@
         content="https://altajwid.github.io/cover.jpg">
 
     <meta
+        property="og:image:secure_url"
+        content="https://altajwid.github.io/cover.jpg">
+
+    <meta
+        property="og:image:type"
+        content="image/jpeg">
+
+    <meta
+        property="og:image:width"
+        content="984">
+
+    <meta
+        property="og:image:height"
+        content="1452">
+
+    <meta
+        property="og:image:alt"
+        content="غلاف كتاب دليل أحكام التجويد">
+
+    <meta
         property="og:locale"
         content="ar_AR">
 
 
+    <!-- =============================== -->
     <!-- بيانات منصة X -->
+    <!-- =============================== -->
 
     <meta
         name="twitter:card"
@@ -62,11 +89,18 @@
 
     <style>
 
+        html {
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+        }
+
         body {
-            font-family: "Cairo", sans-serif;
+            font-family: "Cairo", Arial, sans-serif;
             background: linear-gradient(to bottom, #115e2b, #e8f5e9);
             margin: 0;
             padding: 0;
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
         }
 
         .container {
@@ -82,7 +116,9 @@
         }
 
 
+        /* =============================== */
         /* العنوان الرئيسي */
+        /* =============================== */
 
         h1 {
             font-family: "Amiri", "Cairo", serif;
@@ -91,16 +127,19 @@
             font-size: 24px;
             font-weight: 900;
             letter-spacing: 0.5px;
+            line-height: 1.45;
         }
 
         .subtitle {
             font-size: 13px;
             color: #4b5563;
             margin-bottom: 18px;
+            line-height: 1.6;
         }
 
         .cover {
             width: 85%;
+            height: auto;
             border-radius: 15px;
             box-shadow: 0 6px 18px rgba(0,0,0,0.3);
             margin-bottom: 25px;
@@ -125,29 +164,26 @@
 
             width: 88%;
             max-width: 340px;
-
             box-sizing: border-box;
 
             padding: 14px 24px;
 
             font-size: 19px;
-
             font-weight: 800;
+            line-height: 1.4;
 
             border-radius: 14px;
-
             border: 2px solid #d4af37;
 
             cursor: pointer;
-
             text-decoration: none;
 
             color: #ffffff;
 
             background: linear-gradient(
                 135deg,
-                #6b4526,
-                #8a5b30
+                #5f3d21,
+                #7c522c
             );
 
             box-shadow:
@@ -168,12 +204,13 @@
             width: 34px;
             height: 34px;
 
+            flex-shrink: 0;
+
             border-radius: 9px;
 
             background: rgba(255,255,255,0.15);
 
             font-size: 20px;
-
             line-height: 1;
         }
 
@@ -200,6 +237,7 @@
         .section-title {
             font-size: 20px;
             font-weight: 800;
+            line-height: 1.4;
 
             padding: 10px 12px;
 
@@ -234,7 +272,9 @@
             list-style: none;
             cursor: pointer;
             position: relative;
+
             padding-left: 48px;
+
             user-select: none;
         }
 
@@ -249,6 +289,7 @@
 
         .dropdown-arrow {
             position: absolute;
+
             left: 15px;
             top: 50%;
 
@@ -279,16 +320,22 @@
 
         .item {
             background: #d1fae5;
+
             padding: 10px 12px;
+
             margin: 6px 0;
+
             border-radius: 8px;
 
             display: flex;
+
             justify-content: space-between;
+
             align-items: center;
 
             font-size: 15px;
             font-weight: 600;
+            line-height: 1.55;
 
             border-right: 4px solid #16a34a;
 
@@ -305,20 +352,30 @@
 
         .item span.text {
             flex: 1;
+            min-width: 0;
             margin-left: 8px;
         }
 
         .soon-badge {
             color: #b91c1c;
+
             font-weight: bold;
+
             margin-right: 10px;
+
             font-size: 16px;
+
             white-space: nowrap;
+
+            flex-shrink: 0;
         }
 
         .item:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.16);
+
+            box-shadow:
+                0 4px 10px rgba(0,0,0,0.16);
+
             background-color: #bbf7d0;
         }
 
@@ -333,15 +390,27 @@
 
         .bulk-download-btn {
             display: block;
+
             width: 95%;
+
             box-sizing: border-box;
+
             margin: 10px auto 0;
+
             padding: 12px;
+
             font-size: 17px;
+
             font-weight: 800;
+
+            line-height: 1.5;
+
             border-radius: 10px;
+
             color: #ffffff;
+
             text-decoration: none;
+
             transition: 0.25s;
         }
 
@@ -355,8 +424,11 @@
 
         .bulk-download-btn:hover {
             transform: translateY(-2px);
+
             filter: brightness(1.07);
-            box-shadow: 0 6px 14px rgba(0,0,0,0.22);
+
+            box-shadow:
+                0 6px 14px rgba(0,0,0,0.22);
         }
 
 
@@ -366,14 +438,24 @@
 
         .copyright {
             margin-top: 30px;
+
             font-size: 16px;
+
             font-weight: 800;
+
             color: #b58a00;
+
             background: #fff6cc;
+
             padding: 12px;
+
             border-radius: 10px;
+
             border: 1px solid #e6d68a;
+
             text-align: center;
+
+            line-height: 1.6;
         }
 
 
@@ -387,38 +469,51 @@
 
         .share-title {
             font-size: 17px;
+
             font-weight: 800;
+
             color: #c51033;
+
             margin-bottom: 10px;
         }
 
         .share-buttons {
             display: flex;
+
             justify-content: center;
+
             gap: 18px;
+
             flex-wrap: wrap;
         }
 
         .share-item {
             display: flex;
+
             flex-direction: column;
+
             align-items: center;
+
             gap: 6px;
+
             min-width: 70px;
         }
 
         .share-btn {
             width: 48px;
             height: 48px;
+
             border-radius: 50%;
 
             display: flex;
+
             align-items: center;
             justify-content: center;
 
             text-decoration: none;
 
-            box-shadow: 0 4px 10px rgba(0,0,0,0.16);
+            box-shadow:
+                0 4px 10px rgba(0,0,0,0.16);
 
             transition: 0.25s;
         }
@@ -430,7 +525,8 @@
 
             filter: brightness(1.05);
 
-            box-shadow: 0 6px 14px rgba(0,0,0,0.22);
+            box-shadow:
+                0 6px 14px rgba(0,0,0,0.22);
         }
 
         .share-icon {
@@ -448,7 +544,6 @@
             color: #111827;
         }
 
-
         .whatsapp {
             background: #25D366;
         }
@@ -462,12 +557,13 @@
         }
 
         .instagram {
-            background: linear-gradient(
-                135deg,
-                #833ab4,
-                #fd1d1d,
-                #fcb045
-            );
+            background:
+                linear-gradient(
+                    135deg,
+                    #833ab4,
+                    #fd1d1d,
+                    #fcb045
+                );
         }
 
         .x-platform {
@@ -476,7 +572,7 @@
 
 
         /* =============================== */
-        /* العودة إلى أعلى الصفحة */
+        /* زر العودة للأعلى */
         /* =============================== */
 
         #backToTop {
@@ -497,16 +593,19 @@
             font-size: 22px;
 
             display: flex;
+
             justify-content: center;
             align-items: center;
 
             cursor: pointer;
 
-            box-shadow: 0 5px 12px rgba(0,0,0,0.25);
+            box-shadow:
+                0 5px 12px rgba(0,0,0,0.25);
 
             transition: 0.3s;
 
             opacity: 0;
+
             visibility: hidden;
 
             z-index: 999;
@@ -514,17 +613,19 @@
 
         #backToTop:hover {
             transform: translateY(-3px);
+
             background: #0a401f;
         }
 
         #backToTop.show {
             opacity: 1;
+
             visibility: visible;
         }
 
 
         /* =============================== */
-        /* الهواتف */
+        /* تحسين العرض على الهواتف */
         /* =============================== */
 
         @media (max-width: 600px) {
@@ -534,12 +635,43 @@
                 padding: 18px 14px;
             }
 
+            h1 {
+                font-size: 21px;
+            }
+
             .cover {
                 width: 95%;
             }
 
             .download-main-btn {
                 width: 95%;
+                font-size: 18px;
+            }
+
+            .section-title {
+                font-size: 17px;
+                line-height: 1.45;
+                padding: 10px 11px;
+            }
+
+            .item {
+                font-size: 13.5px;
+                padding: 9px 10px;
+                line-height: 1.5;
+                align-items: center;
+            }
+
+            .item span.text {
+                min-width: 0;
+            }
+
+            .soon-badge {
+                font-size: 13px;
+                margin-right: 6px;
+            }
+
+            .bulk-download-btn {
+                font-size: 15px;
             }
 
             .share-buttons {
@@ -549,6 +681,7 @@
             .share-item {
                 min-width: 58px;
             }
+
         }
 
     </style>
@@ -612,7 +745,6 @@
     <!-- =============================== -->
 
     <details class="content-dropdown">
-
 
         <summary class="section-title video">
 
@@ -813,9 +945,10 @@
         <a
             href="#"
             class="bulk-download-btn video">
-            ⬇️ تحميل جميع الفيديوهات كملف واحد
-        </a>
 
+            ⬇️ تحميل جميع الفيديوهات كملف واحد
+
+        </a>
 
     </details>
 
@@ -826,7 +959,6 @@
     <!-- =============================== -->
 
     <details class="content-dropdown">
-
 
         <summary class="section-title audio">
 
@@ -1027,9 +1159,10 @@
         <a
             href="#"
             class="bulk-download-btn audio">
-            ⬇️ تحميل جميع الصوتيات كملف واحد
-        </a>
 
+            ⬇️ تحميل جميع الصوتيات كملف واحد
+
+        </a>
 
     </details>
 
@@ -1063,7 +1196,6 @@
 
 
             <!-- واتساب -->
-            <!-- يرسل الرابط وحده فقط -->
 
             <div class="share-item">
 
@@ -1087,7 +1219,7 @@
 
 
 
-            <!-- تيلغرام -->
+            <!-- تليغرام -->
 
             <div class="share-item">
 
@@ -1096,17 +1228,17 @@
                     href="https://t.me/share/url?url=https://altajwid.github.io/&text=كتاب%20دليل%20أحكام%20التجويد"
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label="مشاركة الكتاب عبر تيلغرام">
+                    aria-label="مشاركة الكتاب عبر تليغرام">
 
                     <img
                         src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/telegram.svg"
                         class="share-icon"
-                        alt="تيلغرام">
+                        alt="تليغرام">
 
                 </a>
 
                 <div class="share-label">
-                    تيلغرام
+                    تليغرام
                 </div>
 
             </div>
@@ -1207,7 +1339,9 @@
 <div
     id="backToTop"
     aria-label="العودة إلى أعلى الصفحة">
+
     ⬆️
+
 </div>
 
 
@@ -1217,26 +1351,35 @@
     const btn =
         document.getElementById("backToTop");
 
+
     window.addEventListener(
         "scroll",
         () => {
 
             if (window.scrollY > 250) {
+
                 btn.classList.add("show");
+
             } else {
+
                 btn.classList.remove("show");
+
             }
 
         }
     );
+
 
     btn.addEventListener(
         "click",
         () => {
 
             window.scrollTo({
+
                 top: 0,
+
                 behavior: "smooth"
+
             });
 
         }
