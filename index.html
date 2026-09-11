@@ -68,7 +68,6 @@
         property="og:locale"
         content="ar_AR">
 
-    <!-- تعريف إضافي للصورة -->
     <link
         rel="image_src"
         href="https://altajwid.github.io/cover.jpg">
@@ -99,9 +98,7 @@
         content="https://altajwid.github.io/cover.jpg">
 
 
-    <!-- =============================== -->
-    <!-- بيانات منظمة إضافية للصورة -->
-    <!-- =============================== -->
+    <!-- بيانات منظمة إضافية -->
 
     <script type="application/ld+json">
     {
@@ -281,18 +278,14 @@
             position: absolute;
             left: 15px;
             top: 50%;
-            transform:
-                translateY(-50%)
-                rotate(0deg);
+            transform: translateY(-50%) rotate(0deg);
             font-size: 22px;
             font-weight: bold;
             transition: transform 0.25s ease;
         }
 
         .content-dropdown[open] .dropdown-arrow {
-            transform:
-                translateY(-50%)
-                rotate(180deg);
+            transform: translateY(-50%) rotate(180deg);
         }
 
         .items-wrapper {
@@ -428,9 +421,7 @@
         }
 
         .share-btn:hover {
-            transform:
-                translateY(-2px)
-                scale(1.03);
+            transform: translateY(-2px) scale(1.03);
             filter: brightness(1.05);
             box-shadow: 0 6px 14px rgba(0,0,0,0.22);
         }
@@ -438,9 +429,7 @@
         .share-icon {
             width: 22px;
             height: 22px;
-            filter:
-                brightness(0)
-                invert(1);
+            filter: brightness(0) invert(1);
         }
 
         .share-label {
@@ -462,13 +451,12 @@
         }
 
         .instagram {
-            background:
-                linear-gradient(
-                    135deg,
-                    #833ab4,
-                    #fd1d1d,
-                    #fcb045
-                );
+            background: linear-gradient(
+                135deg,
+                #833ab4,
+                #fd1d1d,
+                #fcb045
+            );
         }
 
         .x-platform {
@@ -569,64 +557,20 @@
 
 <body>
 
-<!-- تعريف إضافي مخفي للكتاب والصورة -->
-<div
-    itemscope
-    itemtype="https://schema.org/Book"
-    style="display:none;">
-
-    <meta
-        itemprop="name"
-        content="كتاب دليل أحكام التجويد">
-
-    <link
-        itemprop="url"
-        href="https://altajwid.github.io/">
-
-    <link
-        itemprop="image"
-        href="https://altajwid.github.io/cover.jpg">
-
-    <span
-        itemprop="thumbnail"
-        itemscope
-        itemtype="https://schema.org/ImageObject">
-
-        <link
-            itemprop="url"
-            href="https://altajwid.github.io/cover.jpg">
-
-        <meta
-            itemprop="width"
-            content="984">
-
-        <meta
-            itemprop="height"
-            content="1452">
-
-    </span>
-
-</div>
-
 
 <div class="container">
-
 
     <h1>
         المحتوى المرئي والصوتي للكتاب
     </h1>
 
-
     <div class="subtitle">
         سيتم تفعيل روابط الفيديوهات والصوتيات لاحقًا بإذن الله.
     </div>
 
-
     <img
         src="cover.jpg"
         class="cover"
-        width="984"
-        height="1452"
         alt="غلاف كتاب دليل أحكام التجويد"
     >
 
@@ -654,15 +598,15 @@
     </div>
 
 
+    <!-- المحتوى المرئي -->
+
     <details class="content-dropdown">
 
         <summary class="section-title video">
 
             📘 المحتوى المرئي (الفيديوهات)
 
-            <span class="dropdown-arrow">
-                ⌄
-            </span>
+            <span class="dropdown-arrow">⌄</span>
 
         </summary>
 
@@ -805,11 +749,15 @@
         <a
             href="#"
             class="bulk-download-btn video">
+
             ⬇️ تحميل جميع الفيديوهات كملف واحد
+
         </a>
 
     </details>
 
+
+    <!-- المحتوى الصوتي -->
 
     <details class="content-dropdown">
 
@@ -817,9 +765,7 @@
 
             🎧 المحتوى الصوتي (التسجيلات)
 
-            <span class="dropdown-arrow">
-                ⌄
-            </span>
+            <span class="dropdown-arrow">⌄</span>
 
         </summary>
 
@@ -962,7 +908,9 @@
         <a
             href="#"
             class="bulk-download-btn audio">
+
             ⬇️ تحميل جميع الصوتيات كملف واحد
+
         </a>
 
     </details>
@@ -972,6 +920,8 @@
         📌 يُسمح بالنسخ والمشاركة والنشر دون قيود.
     </div>
 
+
+    <!-- المشاركة -->
 
     <div class="share-area">
 
@@ -983,11 +933,15 @@
         <div class="share-buttons">
 
 
+            <!-- واتساب -->
+
             <div class="share-item">
 
                 <a
                     class="share-btn whatsapp"
-                    href="whatsapp://send?text=https%3A%2F%2Faltajwid.github.io%2F"
+                    href="https://wa.me/?text=https%3A%2F%2Faltajwid.github.io%2F"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     aria-label="مشاركة الكتاب عبر واتساب">
 
                     <img
@@ -1003,6 +957,8 @@
 
             </div>
 
+
+            <!-- تليغرام -->
 
             <div class="share-item">
 
@@ -1027,6 +983,8 @@
             </div>
 
 
+            <!-- فيسبوك -->
+
             <div class="share-item">
 
                 <a
@@ -1050,6 +1008,8 @@
             </div>
 
 
+            <!-- إنستغرام -->
+
             <div class="share-item">
 
                 <a
@@ -1072,6 +1032,8 @@
 
             </div>
 
+
+            <!-- منصة X -->
 
             <div class="share-item">
 
@@ -1113,33 +1075,26 @@
 
 <script>
 
-    const btn =
-        document.getElementById("backToTop");
+    const btn = document.getElementById("backToTop");
 
-    window.addEventListener(
-        "scroll",
-        () => {
+    window.addEventListener("scroll", () => {
 
-            if (window.scrollY > 250) {
-                btn.classList.add("show");
-            } else {
-                btn.classList.remove("show");
-            }
-
+        if (window.scrollY > 250) {
+            btn.classList.add("show");
+        } else {
+            btn.classList.remove("show");
         }
-    );
 
-    btn.addEventListener(
-        "click",
-        () => {
+    });
 
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
+    btn.addEventListener("click", () => {
 
-        }
-    );
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    });
 
 </script>
 
