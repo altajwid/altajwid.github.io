@@ -15,9 +15,7 @@
         name="description"
         content="النسخة الإلكترونية من كتاب دليل أحكام التجويد">
 
-    <!-- =============================== -->
     <!-- بيانات معاينة الرابط -->
-    <!-- =============================== -->
 
     <meta
         property="og:title"
@@ -67,7 +65,6 @@
         property="og:locale"
         content="ar_AR">
 
-
     <!-- بيانات منصة X -->
 
     <meta
@@ -86,7 +83,6 @@
         name="twitter:image"
         content="https://altajwid.github.io/cover.jpg">
 
-
     <!-- بيانات منظمة -->
 
     <script type="application/ld+json">
@@ -102,10 +98,6 @@
 
 
     <style>
-
-        /* =============================== */
-        /* إعدادات عامة */
-        /* =============================== */
 
         * {
             box-sizing: border-box;
@@ -129,11 +121,6 @@
             color: #26362d;
 
             background:
-                radial-gradient(
-                    circle at top,
-                    rgba(212,175,55,0.16),
-                    transparent 32%
-                ),
                 linear-gradient(
                     145deg,
                     #07391f 0%,
@@ -148,13 +135,11 @@
         }
 
 
-        /* =============================== */
         /* الحاوية الرئيسية */
-        /* =============================== */
 
         .page-wrapper {
             width: 100%;
-            padding: 32px 14px 45px;
+            padding: 30px 14px 42px;
         }
 
         .container {
@@ -177,12 +162,10 @@
             box-shadow:
                 0 18px 45px rgba(0,0,0,0.25),
                 0 0 0 1px rgba(212,175,55,0.18);
-
-            position: relative;
         }
 
 
-        /* خط ذهبي علوي */
+        /* الخط العلوي */
 
         .container::before {
             content: "";
@@ -203,31 +186,11 @@
         }
 
 
-        /* =============================== */
         /* رأس الصفحة */
-        /* =============================== */
 
         .hero {
             padding: 28px 24px 18px;
-
             text-align: center;
-
-            background:
-                linear-gradient(
-                    180deg,
-                    #ffffff 0%,
-                    #fafbf8 100%
-                );
-        }
-
-        .ornament {
-            color: #b28b2f;
-
-            font-size: 23px;
-
-            margin-bottom: 6px;
-
-            letter-spacing: 3px;
         }
 
         h1 {
@@ -247,21 +210,11 @@
             color: #0b4d27;
         }
 
-        .book-subtitle {
-            margin: 7px 0 0;
-
-            font-size: 15px;
-
-            color: #806126;
-
-            font-weight: 700;
-        }
-
         .separator {
-            width: 105px;
+            width: 100px;
             height: 2px;
 
-            margin: 17px auto 0;
+            margin: 15px auto 0;
 
             background:
                 linear-gradient(
@@ -273,13 +226,10 @@
         }
 
 
-        /* =============================== */
         /* غلاف الكتاب */
-        /* =============================== */
 
         .cover-area {
             padding: 8px 26px 22px;
-
             text-align: center;
         }
 
@@ -287,7 +237,6 @@
             display: inline-block;
 
             width: 82%;
-
             max-width: 520px;
 
             padding: 7px;
@@ -318,9 +267,7 @@
         }
 
 
-        /* =============================== */
-        /* بطاقة تعريف قصيرة */
-        /* =============================== */
+        /* التعريف المختصر */
 
         .intro-card {
             width: calc(100% - 48px);
@@ -354,13 +301,10 @@
         }
 
 
-        /* =============================== */
         /* زر تحميل الكتاب */
-        /* =============================== */
 
         .download-area {
             display: flex;
-
             justify-content: center;
 
             padding: 0 20px 28px;
@@ -370,13 +314,11 @@
             display: inline-flex;
 
             align-items: center;
-
             justify-content: center;
 
             gap: 12px;
 
             width: 88%;
-
             max-width: 390px;
 
             min-height: 62px;
@@ -433,7 +375,6 @@
             display: inline-flex;
 
             align-items: center;
-
             justify-content: center;
 
             width: 38px;
@@ -449,9 +390,7 @@
         }
 
 
-        /* =============================== */
-        /* عبارة الإتاحة */
-        /* =============================== */
+        /* السماح بالنشر */
 
         .permission {
             width: calc(100% - 48px);
@@ -478,9 +417,7 @@
         }
 
 
-        /* =============================== */
         /* المشاركة */
-        /* =============================== */
 
         .share-area {
             padding: 24px 18px 29px;
@@ -538,7 +475,6 @@
             display: flex;
 
             align-items: center;
-
             justify-content: center;
 
             border-radius: 50%;
@@ -609,34 +545,24 @@
         }
 
 
-        /* =============================== */
         /* التذييل */
-        /* =============================== */
 
         .footer {
-            padding: 16px 20px 19px;
+            padding: 15px 20px 18px;
 
             text-align: center;
 
             background: #0c4226;
 
-            color: rgba(255,255,255,0.88);
+            color: rgba(255,255,255,0.90);
 
             font-size: 12px;
 
             line-height: 1.7;
         }
 
-        .footer-decoration {
-            color: #d4af37;
 
-            margin: 0 5px;
-        }
-
-
-        /* =============================== */
-        /* زر العودة للأعلى */
-        /* =============================== */
+        /* العودة إلى الأعلى */
 
         #backToTop {
             position: fixed;
@@ -650,7 +576,6 @@
             display: flex;
 
             justify-content: center;
-
             align-items: center;
 
             border-radius: 50%;
@@ -680,7 +605,6 @@
 
         #backToTop.show {
             opacity: 1;
-
             visibility: visible;
         }
 
@@ -689,9 +613,7 @@
         }
 
 
-        /* =============================== */
         /* الهواتف */
-        /* =============================== */
 
         @media (max-width: 600px) {
 
@@ -709,10 +631,6 @@
 
             h1 {
                 font-size: 24px;
-            }
-
-            .book-subtitle {
-                font-size: 13px;
             }
 
             .cover-area {
@@ -782,21 +700,13 @@
     <main class="container">
 
 
-        <!-- رأس الصفحة -->
+        <!-- عنوان الكتاب -->
 
         <section class="hero">
-
-            <div class="ornament">
-                ❖
-            </div>
 
             <h1>
                 كتاب دليل أحكام التجويد
             </h1>
-
-            <div class="book-subtitle">
-                النسخة الإلكترونية
-            </div>
 
             <div class="separator"></div>
 
@@ -819,7 +729,7 @@
         </section>
 
 
-        <!-- تعريف مختصر -->
+        <!-- تعريف الكتاب -->
 
         <div class="intro-card">
 
@@ -856,7 +766,7 @@
         </div>
 
 
-        <!-- إتاحة النشر -->
+        <!-- السماح بالنشر -->
 
         <div class="permission">
             📌 يُسمح بالنسخ والمشاركة والنشر دون قيود.
@@ -1009,11 +919,7 @@
 
         <footer class="footer">
 
-            <span class="footer-decoration">✦</span>
-
             دليل أحكام التجويد
-
-            <span class="footer-decoration">✦</span>
 
         </footer>
 
