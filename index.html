@@ -165,7 +165,7 @@
         }
 
 
-        /* الخط العلوي */
+        /* الخط الذهبي العلوي */
 
         .container::before {
             content: "";
@@ -190,6 +190,7 @@
 
         .hero {
             padding: 28px 24px 18px;
+
             text-align: center;
         }
 
@@ -230,6 +231,7 @@
 
         .cover-area {
             padding: 8px 26px 22px;
+
             text-align: center;
         }
 
@@ -291,7 +293,7 @@
 
             color: #405247;
 
-            font-size: 15px;
+            font-size: 16px;
 
             text-align: center;
         }
@@ -305,6 +307,7 @@
 
         .download-area {
             display: flex;
+
             justify-content: center;
 
             padding: 0 20px 28px;
@@ -314,11 +317,13 @@
             display: inline-flex;
 
             align-items: center;
+
             justify-content: center;
 
             gap: 12px;
 
             width: 88%;
+
             max-width: 390px;
 
             min-height: 62px;
@@ -375,6 +380,7 @@
             display: inline-flex;
 
             align-items: center;
+
             justify-content: center;
 
             width: 38px;
@@ -475,6 +481,7 @@
             display: flex;
 
             align-items: center;
+
             justify-content: center;
 
             border-radius: 50%;
@@ -548,21 +555,55 @@
         /* التذييل */
 
         .footer {
-            padding: 15px 20px 18px;
+            padding: 17px 20px 19px;
 
             text-align: center;
 
             background: #0c4226;
+        }
 
-            color: rgba(255,255,255,0.90);
+        .ayah-footer {
+            display: flex;
 
-            font-size: 12px;
+            align-items: center;
 
-            line-height: 1.7;
+            justify-content: center;
+
+            gap: 12px;
+        }
+
+        .ayah-line {
+            width: 42px;
+            height: 1px;
+
+            flex-shrink: 0;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    transparent,
+                    #d4af37,
+                    transparent
+                );
+        }
+
+        .ayah-text {
+            color: #ffffff;
+
+            font-family:
+                "Amiri",
+                "Traditional Arabic",
+                serif;
+
+            font-size: 16px;
+
+            font-weight: 700;
+
+            line-height: 1.8;
         }
 
 
-        /* العودة إلى الأعلى */
+        /* زر العودة إلى الأعلى */
 
         #backToTop {
             position: fixed;
@@ -576,6 +617,7 @@
             display: flex;
 
             justify-content: center;
+
             align-items: center;
 
             border-radius: 50%;
@@ -605,6 +647,7 @@
 
         #backToTop.show {
             opacity: 1;
+
             visibility: visible;
         }
 
@@ -639,6 +682,7 @@
 
             .cover-frame {
                 width: 94%;
+
                 padding: 5px;
             }
 
@@ -647,7 +691,7 @@
 
                 padding: 15px 14px;
 
-                font-size: 14px;
+                font-size: 15px;
             }
 
             .download-area {
@@ -684,6 +728,18 @@
             .share-btn {
                 width: 48px;
                 height: 48px;
+            }
+
+            .ayah-footer {
+                gap: 8px;
+            }
+
+            .ayah-line {
+                width: 28px;
+            }
+
+            .ayah-text {
+                font-size: 15px;
             }
 
         }
@@ -919,7 +975,17 @@
 
         <footer class="footer">
 
-            دليل أحكام التجويد
+            <div class="ayah-footer">
+
+                <span class="ayah-line"></span>
+
+                <span class="ayah-text">
+                    ﴿وَرَتِّلِ الْقُرْآنَ تَرْتِيلًا﴾
+                </span>
+
+                <span class="ayah-line"></span>
+
+            </div>
 
         </footer>
 
